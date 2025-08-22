@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Critical AI Literacy Framework - High Resolution</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+        #diagram-container {
+            text-align: center;
+        }
+        #download-btn {
+            margin: 20px;
+            padding: 12px 24px;
+            background: #007cba;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #download-btn:hover {
+            background: #005a87;
+        }
+        #high-res-svg {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="diagram-container">
+        <h2>Critical AI Literacy Framework - Interconnected Model</h2>
+        <p>Click the button below to download as high-resolution PNG (300 DPI, publication quality)</p>
+        
+        <svg id="high-res-svg" width="2400" height="2100" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <style>
+                    .framework-box {
+                        fill: white;
+                        stroke: black;
+                        stroke-width: 2;
+                    }
+                    .commitment-box {
+                        fill: white;
+                        stroke: black;
+                        stroke-width: 1.5;
+                    }
+                    .connecting-line {
+                        stroke: black;
+                        stroke-width: 2;
+                        fill: none;
+                    }
+                    .framework-title {
+                        font-family: "Times New Roman", serif;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-anchor: middle;
+                        fill: black;
+                    }
+                    .commitment-title {
+                        font-family: "Times New Roman", serif;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-anchor: middle;
+                        fill: black;
+                    }
+                    .commitment-subtitle {
+                        font-family: "Times New Roman", serif;
+                        font-size: 11px;
+                        text-anchor: middle;
+                        fill: black;
+                    }
+                </style>
+            </defs>
+
+            <!-- Background -->
+            <rect width="100%" height="100%" fill="white"/>
+
+            <!-- Central Framework Box -->
+            <rect x="250" y="50" width="300" height="80" class="framework-box"/>
+            <text x="400" y="80" class="framework-title">Critical AI Literacy</text>
+            <text x="400" y="100" class="framework-title">Framework</text>
+
+            <!-- Connecting lines from center to four commitments -->
+            <line x1="350" y1="130" x2="200" y2="200" class="connecting-line"/>
+            <line x1="450" y1="130" x2="600" y2="200" class="connecting-line"/>
+            <line x1="350" y1="130" x2="200" y2="350" class="connecting-line"/>
+            <line x1="450" y1="130" x2="600" y2="350" class="connecting-line"/>
+
+            <!-- Democratic AI Policy (Top Left) -->
+            <rect x="50" y="200" width="300" height="100" class="commitment-box"/>
+            <text x="200" y="230" class="commitment-title">Democratic AI Policy</text>
+            <text x="200" y="250" class="commitment-subtitle">Co-construction of classroom policies</text>
+            <text x="200" y="265" class="commitment-subtitle">that reflect students' diverse identities,</text>
+            <text x="200" y="280" class="commitment-subtitle">technological literacies, and social contexts</text>
+
+            <!-- Ethical Pedagogy (Top Right) -->
+            <rect x="450" y="200" width="300" height="100" class="commitment-box"/>
+            <text x="600" y="230" class="commitment-title">Ethical Pedagogy</text>
+            <text x="600" y="250" class="commitment-subtitle">GenAI use aligned with culturally</text>
+            <text x="600" y="265" class="commitment-subtitle">sustaining and critically conscious</text>
+            <text x="600" y="280" class="commitment-subtitle">teaching practices</text>
+
+            <!-- Counter-Data Practices (Bottom Left) -->
+            <rect x="50" y="350" width="300" height="100" class="commitment-box"/>
+            <text x="200" y="380" class="commitment-title">Counter-Data Practices</text>
+            <text x="200" y="400" class="commitment-subtitle">Interrogating AI biases and inserting</text>
+            <text x="200" y="415" class="commitment-subtitle">counter-narratives into digital</text>
+            <text x="200" y="430" class="commitment-subtitle">epistemology</text>
+
+            <!-- Dialogic Use of GenAI (Bottom Right) -->
+            <rect x="450" y="350" width="300" height="100" class="commitment-box"/>
+            <text x="600" y="380" class="commitment-title">Dialogic Use of GenAI</text>
+            <text x="600" y="400" class="commitment-subtitle">AI as thought collaborator for</text>
+            <text x="600" y="415" class="commitment-subtitle">critical thinking, not substitute</text>
+            <text x="600" y="430" class="commitment-subtitle">for creativity</text>
+
+            <!-- Horizontal connecting lines between commitments -->
+            <line x1="350" y1="250" x2="450" y2="250" class="connecting-line"/>
+            <line x1="350" y1="400" x2="450" y2="400" class="connecting-line"/>
+
+            <!-- Vertical connecting lines between commitments -->
+            <line x1="200" y1="300" x2="200" y2="350" class="connecting-line"/>
+            <line x1="600" y1="300" x2="600" y2="350" class="connecting-line"/>
+
+            <!-- Central connection point -->
+            <circle cx="400" cy="325" r="8" fill="black"/>
+
+            <!-- Lines connecting all commitments through center -->
+            <line x1="200" y1="325" x2="600" y2="325" class="connecting-line"/>
+            <line x1="400" y1="225" x2="400" y2="425" class="connecting-line"/>
+
+            <!-- Foundation text -->
+            <text x="400" y="550" class="commitment-subtitle" style="font-style: italic;">Grounded in posthumanist theory, culturally responsive pedagogy,</text>
+            <text x="400" y="570" class="commitment-subtitle" style="font-style: italic;">and emerging scholarship in GenAI and education</text>
+
+        </svg>
+
+        <br>
+        <button id="download-btn" onclick="downloadHighResPNG()">Download High-Resolution PNG (300 DPI)</button>
+        
+        <p><strong>Alternative:</strong> Right-click the diagram above and "Save image as..." to get the SVG version (recommended for publications)</p>
+    </div>
+
+    <script>
+        function downloadHighResPNG() {
+            const svg = document.getElementById('high-res-svg');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set high resolution (300 DPI equivalent)
+            canvas.width = 2400;  // 8 inches * 300 DPI
+            canvas.height = 2100; // 7 inches * 300 DPI
+            
+            const data = new XMLSerializer().serializeToString(svg);
+            const img = new Image();
+            
+            img.onload = function() {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                const link = document.createElement('a');
+                link.download = 'critical_ai_literacy_framework_300dpi.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+            
+            img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(data)));
+        }
+    </script>
+</body>
+</html>
