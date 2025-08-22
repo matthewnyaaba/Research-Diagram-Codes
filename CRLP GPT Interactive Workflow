@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRLP GPT Interactive Workflow - High Resolution</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+        #diagram-container {
+            text-align: center;
+        }
+        #download-btn {
+            margin: 20px;
+            padding: 12px 24px;
+            background: #007cba;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #download-btn:hover {
+            background: #005a87;
+        }
+        #high-res-svg {
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="diagram-container">
+        <h2>CRLP GPT Interactive Workflow - High Resolution</h2>
+        <p>Click the button below to download as high-resolution PNG (300 DPI, publication quality)</p>
+        
+        <svg id="high-res-svg" width="2400" height="2400" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <style>
+                    .process-box {
+                        fill: white;
+                        stroke: black;
+                        stroke-width: 2;
+                    }
+                    .arrow-line {
+                        stroke: black;
+                        stroke-width: 2;
+                        fill: none;
+                        marker-end: url(#arrowhead);
+                    }
+                    .curved-arrow {
+                        stroke: black;
+                        stroke-width: 2;
+                        fill: none;
+                        marker-end: url(#arrowhead);
+                    }
+                    .process-text {
+                        font-family: "Times New Roman", serif;
+                        font-size: 14px;
+                        text-anchor: middle;
+                        fill: black;
+                    }
+                    .user-box {
+                        fill: white;
+                        stroke: black;
+                        stroke-width: 2;
+                    }
+                </style>
+                <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                    <polygon points="0 0, 10 4, 0 8" fill="black"/>
+                </marker>
+            </defs>
+
+            <!-- Background -->
+            <rect width="100%" height="100%" fill="white"/>
+
+            <!-- CRLP GPT welcomes user -->
+            <rect x="280" y="30" width="240" height="60" class="process-box"/>
+            <text x="400" y="55" class="process-text">CRLP GPT welcomes user</text>
+
+            <!-- Arrow down -->
+            <line x1="400" y1="90" x2="400" y2="140" class="arrow-line"/>
+
+            <!-- CRLP GPT asks context and cultural questions -->
+            <rect x="285" y="140" width="230" height="80" class="process-box"/>
+            <text x="400" y="170" class="process-text">CRLP GPT asks context and</text>
+            <text x="400" y="190" class="process-text">cultural questions</text>
+
+            <!-- Curved arrow down left to user -->
+            <path d="M 285 200 Q 230 235 180 270" class="curved-arrow"/>
+
+            <!-- User provides responses -->
+            <rect x="80" y="270" width="200" height="60" class="user-box"/>
+            <text x="180" y="295" class="process-text">User provides</text>
+            <text x="180" y="315" class="process-text">responses</text>
+
+            <!-- Arrow right -->
+            <line x1="280" y1="300" x2="480" y2="300" class="arrow-line"/>
+
+            <!-- CRLP GPT generates next questions -->
+            <rect x="480" y="270" width="240" height="60" class="process-box"/>
+            <text x="600" y="295" class="process-text">CRLP GPT generates next</text>
+            <text x="600" y="315" class="process-text">questions</text>
+
+            <!-- Curved arrow down left to user -->
+            <path d="M 480 330 Q 330 355 180 380" class="curved-arrow"/>
+
+            <!-- User answers follow-up -->
+            <rect x="80" y="380" width="200" height="60" class="user-box"/>
+            <text x="180" y="405" class="process-text">User answers follow-</text>
+            <text x="180" y="425" class="process-text">up</text>
+
+            <!-- Arrow right -->
+            <line x1="280" y1="410" x2="480" y2="410" class="arrow-line"/>
+
+            <!-- CRLP GPT generates culturally responsive lesson plan -->
+            <rect x="480" y="380" width="240" height="80" class="process-box"/>
+            <text x="600" y="410" class="process-text">CRLP GPT generates culturally</text>
+            <text x="600" y="430" class="process-text">responsive lesson plan</text>
+
+            <!-- Curved arrow down left to user -->
+            <path d="M 480 460 Q 330 485 180 510" class="curved-arrow"/>
+
+            <!-- User confirms or revises inputs -->
+            <rect x="80" y="510" width="200" height="80" class="user-box"/>
+            <text x="180" y="540" class="process-text">User confirms or revises inputs</text>
+
+            <!-- Curved arrow down right to final step -->
+            <path d="M 280 550 Q 340 585 400 630" class="curved-arrow"/>
+
+            <!-- CRLP GPT summarizes inputs for user confirmation -->
+            <rect x="280" y="630" width="240" height="80" class="process-box"/>
+            <text x="400" y="660" class="process-text">CRLP GPT summarizes inputs for</text>
+            <text x="400" y="680" class="process-text">user confirmation</text>
+
+        </svg>
+
+        <br>
+        <button id="download-btn" onclick="downloadHighResPNG()">Download High-Resolution PNG (300 DPI)</button>
+        
+        <p><strong>Alternative:</strong> Right-click the diagram above and "Save image as..." to get the SVG version (recommended for publications)</p>
+    </div>
+
+    <script>
+        function downloadHighResPNG() {
+            const svg = document.getElementById('high-res-svg');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set high resolution (300 DPI equivalent)
+            canvas.width = 2400;  // 8 inches * 300 DPI
+            canvas.height = 2400; // 8 inches * 300 DPI
+            
+            const data = new XMLSerializer().serializeToString(svg);
+            const img = new Image();
+            
+            img.onload = function() {
+                ctx.fillStyle = 'white';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                
+                const link = document.createElement('a');
+                link.download = 'crlp_gpt_workflow_300dpi.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+            
+            img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(data)));
+        }
+    </script>
+</body>
+</html>
