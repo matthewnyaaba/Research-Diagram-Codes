@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptual Framework Diagram</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .framework-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border: 2px solid black;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: black;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: black;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .framework-svg {
+            width: 100%;
+            height: 800px;
+            border: 2px solid black;
+            background: white;
+        }
+        
+        .text-title {
+            font-size: 12px;
+            font-weight: bold;
+            fill: black;
+            text-anchor: middle;
+            dominant-baseline: central;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .text-content {
+            font-size: 12px;
+            fill: black;
+            text-anchor: middle;
+            dominant-baseline: central;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .arrow {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+        
+        .feedback-arrow {
+            stroke: black;
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+            stroke-dasharray: 5,3;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            font-family: 'Times New Roman', serif;
+            font-size: 12px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 2px solid black;
+            background: white;
+        }
+        
+        .caption {
+            margin-top: 30px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: black;
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="framework-container">
+        <div class="title">Conceptual Framework: Systemic Inequity in ECE Teacher Preparation</div>
+        <div class="subtitle">Professional Specialization Barriers and Reform Pathways in Ghana's Colleges of Education</div>
+        
+        <svg class="framework-svg" viewBox="0 0 1100 750">
+            <!-- Arrow markers -->
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+                </marker>
+            </defs>
+            
+            <!-- Theoretical Foundation Level -->
+            <rect x="50" y="50" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+            <text x="150" y="75" class="text-title">Institutional Theory</text>
+            <text x="150" y="95" class="text-content">Isomorphic Pressures</text>
+            <text x="150" y="110" class="text-content">Normative Reproduction</text>
+            
+            <rect x="300" y="50" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+            <text x="400" y="75" class="text-title">Professional Capital Theory</text>
+            <text x="400" y="95" class="text-content">Specialization Hierarchy</text>
+            <text x="400" y="110" class="text-content">Status Incongruence</text>
+            
+            <rect x="550" y="50" width="200" height="80" fill="white" stroke="black" stroke-width="2"/>
+            <text x="650" y="75" class="text-title">Pedagogical Coherence</text>
+            <text x="650" y="95" class="text-content">Content-Practice Alignment</text>
+            <text x="650" y="110" class="text-content">Modeling Authenticity</text>
+            
+            <!-- Systemic Mechanisms Level -->
+            <rect x="100" y="200" width="180" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="190" y="225" class="text-title">Recruitment Bias</text>
+            <text x="190" y="245" class="text-content">Non-ECE Preference</text>
+            <text x="190" y="260" class="text-content">Subject-Specific Matching</text>
+            <text x="190" y="275" class="text-content">Leadership Dominance</text>
+            
+            <rect x="320" y="200" width="180" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="410" y="225" class="text-title">Professional Gaps</text>
+            <text x="410" y="245" class="text-content">Pedagogical Modeling</text>
+            <text x="410" y="260" class="text-content">Methodology Weakness</text>
+            <text x="410" y="275" class="text-content">Self-Study Reliance</text>
+            
+            <rect x="540" y="200" width="180" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="630" y="225" class="text-title">Career Disparities</text>
+            <text x="630" y="245" class="text-content">Stalled Progression</text>
+            <text x="630" y="260" class="text-content">Research Misalignment</text>
+            <text x="630" y="275" class="text-content">Growth Limitations</text>
+            
+            <!-- Impact Outcomes Level -->
+            <rect x="150" y="370" width="170" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="235" y="395" class="text-title">Student Impact</text>
+            <text x="235" y="415" class="text-content">Curriculum Confusion</text>
+            <text x="235" y="430" class="text-content">Demotivation</text>
+            <text x="235" y="445" class="text-content">Identity Crisis</text>
+            
+            <rect x="360" y="370" width="170" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="445" y="395" class="text-title">Program Quality</text>
+            <text x="445" y="415" class="text-content">Compromised Preparation</text>
+            <text x="445" y="430" class="text-content">Practice Misalignment</text>
+            <text x="445" y="445" class="text-content">Weak ECE Foundation</text>
+            
+            <rect x="570" y="370" width="170" height="90" fill="white" stroke="black" stroke-width="2"/>
+            <text x="655" y="395" class="text-title">System Perpetuation</text>
+            <text x="655" y="415" class="text-content">Cycle Reinforcement</text>
+            <text x="655" y="430" class="text-content">Inequality Maintenance</text>
+            <text x="655" y="445" class="text-content">Reform Resistance</text>
+            
+            <!-- Reform Imperative Level -->
+            <rect x="50" y="530" width="160" height="100" fill="white" stroke="black" stroke-width="2"/>
+            <text x="130" y="555" class="text-title">Recruitment</text>
+            <text x="130" y="570" class="text-title">Reform</text>
+            <text x="130" y="590" class="text-content">ECE-Specific Requirements</text>
+            <text x="130" y="605" class="text-content">Specialization Priority</text>
+            <text x="130" y="620" class="text-content">Leadership Transformation</text>
+            
+            <rect x="250" y="530" width="160" height="100" fill="white" stroke="black" stroke-width="2"/>
+            <text x="330" y="555" class="text-title">Professional</text>
+            <text x="330" y="570" class="text-title">Development</text>
+            <text x="330" y="590" class="text-content">Bridging Programs</text>
+            <text x="330" y="605" class="text-content">Competency Building</text>
+            <text x="330" y="620" class="text-content">Continuous Learning</text>
+            
+            <rect x="450" y="530" width="160" height="100" fill="white" stroke="black" stroke-width="2"/>
+            <text x="530" y="555" class="text-title">Institutional</text>
+            <text x="530" y="570" class="text-title">Transformation</text>
+            <text x="530" y="590" class="text-content">Policy Alignment</text>
+            <text x="530" y="605" class="text-content">Culture Change</text>
+            <text x="530" y="620" class="text-content">Justice Integration</text>
+            
+            <rect x="650" y="530" width="160" height="100" fill="white" stroke="black" stroke-width="2"/>
+            <text x="730" y="555" class="text-title">Quality</text>
+            <text x="730" y="570" class="text-title">Enhancement</text>
+            <text x="730" y="590" class="text-content">Coherent Programs</text>
+            <text x="730" y="605" class="text-content">Practice Integration</text>
+            <text x="730" y="620" class="text-content">Excellence Standards</text>
+            
+            <!-- Main flow arrows -->
+            <line x1="150" y1="130" x2="190" y2="200" class="arrow"/>
+            <line x1="400" y1="130" x2="410" y2="200" class="arrow"/>
+            <line x1="650" y1="130" x2="630" y2="200" class="arrow"/>
+            
+            <line x1="190" y1="290" x2="235" y2="370" class="arrow"/>
+            <line x1="410" y1="290" x2="445" y2="370" class="arrow"/>
+            <line x1="630" y1="290" x2="655" y2="370" class="arrow"/>
+            
+            <line x1="235" y1="460" x2="130" y2="530" class="arrow"/>
+            <line x1="445" y1="460" x2="330" y2="530" class="arrow"/>
+            <line x1="445" y1="460" x2="530" y2="530" class="arrow"/>
+            <line x1="655" y1="460" x2="730" y2="530" class="arrow"/>
+            
+            <!-- Horizontal connections -->
+            <line x1="280" y1="245" x2="320" y2="245" class="arrow"/>
+            <line x1="500" y1="245" x2="540" y2="245" class="arrow"/>
+            
+            <line x1="320" y1="415" x2="360" y2="415" class="arrow"/>
+            <line x1="530" y1="415" x2="570" y2="415" class="arrow"/>
+            
+            <!-- Feedback loops -->
+            <path d="M 700 400 Q 800 350 780 290 Q 760 200 650 180" class="feedback-arrow"/>
+            <path d="M 600 580 Q 900 600 850 300 Q 800 180 500 160" class="feedback-arrow"/>
+            
+            <!-- Central organizing principle -->
+            <ellipse cx="850" cy="300" rx="120" ry="60" fill="white" stroke="black" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="850" y="285" class="text-title">SYSTEMIC INEQUITY</text>
+            <text x="850" y="305" class="text-content">Professional Specialization</text>
+            <text x="850" y="320" class="text-content">vs Institutional Inertia</text>
+        </svg>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span><strong>Theoretical Foundations:</strong> Core theories informing the framework</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span><strong>Systemic Mechanisms:</strong> Processes perpetuating inequity</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span><strong>Impact Outcomes:</strong> Consequences of inequitable practices</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color"></div>
+                <span><strong>Reform Imperatives:</strong> Necessary transformational actions</span>
+            </div>
+        </div>
+        
+        <div class="caption">
+            <strong>Figure 1.</strong> Conceptual framework illustrating the systematic inequity in ECE teacher preparation programs. The model demonstrates how institutional theories inform understanding of systemic mechanisms that create negative outcomes, necessitating comprehensive reforms. The central organizing principle highlights the tension between professional specialization needs and institutional inertia. Solid arrows indicate direct causal pathways, while dashed arrows represent feedback loops that perpetuate or challenge the system. This framework integrates institutional theory, professional capital theory, and pedagogical coherence theory to explain the complex dynamics of faculty recruitment, professional competency, and educational quality in Ghana's Colleges of Education ECE programs.
+        </div>
+    </div>
+</body>
+</html>
